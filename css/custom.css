@@ -1,0 +1,202 @@
+body.splash-page-body {
+    margin: 0;
+}
+
+
+body.section-front-page.template-front_page_view #visual-portal-wrapper {
+    pointer-events: none !important;
+}
+
+body.section-front-page.template-front_page_view #visual-portal-wrapper * {
+    pointer-events: none !important;
+}
+
+body.section-front-page.template-front_page_view.splash-off #visual-portal-wrapper { 
+    visibility: visible;
+}
+
+body.section-front-page.template-front_page_view.splash-off {
+    margin-top: 20px !important;
+    overflow: auto !important;
+}
+
+#splash-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    z-index: 2147483647;
+    overflow: auto;
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+#splash-overlay #splash-close-btn {
+    font-size: 50px;
+    border-bottom: 0px;
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    text-decoration: none;
+    z-index: 10000;
+}
+
+@media(max-width: 991px) {
+    #splash-overlay #splash-close-btn {
+        left: 10px;
+    }
+}
+
+#splash-overlay #splash-close-btn:hover, 
+#splash-overlay #splash-close-btn:active, 
+#splash-overlay #splash-close-btn:focus {
+    text-decoration: underline;
+}
+
+
+/* Scrolling div */
+#splash-overlay .top-scrolling-text,
+body.splash-page-body .top-scrolling-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+}
+
+#splash-overlay .bottom-scrolling-text,
+body.splash-page-body .bottom-scrolling-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+}
+
+.top-scrolling-text.blue,
+.bottom-scrolling-text.blue {
+    background-color: #5fa0bd;
+}
+
+.top-scrolling-text.orange,
+.bottom-scrolling-text.orange {
+    background-color: #fb6e47;
+}
+
+.top-scrolling-text.orange-text,
+.bottom-scrolling-text.orange-text {
+    background-color: #f9eee7;
+}
+
+.top-scrolling-text.orange-text .scrolling-text,
+.bottom-scrolling-text.orange-text .scrolling-text {
+    color: #fb6e47 !important;
+}
+
+.top-scrolling-text.orange .scrolling-text,
+.bottom-scrolling-text.orange .scrolling-text {
+    color: #ffffff !important;
+}
+
+.scrolling-text-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 1000%;
+    white-space: nowrap;
+}
+
+.scrolling-text-wrapper .scrolling-text {
+    font-size: 28px;
+    color: #000000;
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    line-height: 63px;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Move it (define the animation) */
+
+.scrolling-text span {
+    margin-right: 80px;
+}
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+#splash-overlay .section{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Defining each section background and styles
+* --------------------------------------- */
+#splash-overlay #section0{
+    background-image: url(/splash-page/imgs/img3.jpg);
+}
+
+#splash-overlay #section1{
+    background-image: url(/splash-page/imgs/img2.jpg);
+}
+
+#splash-overlay #section2{
+    background-image: url(/splash-page/imgs/img1.jpg);
+}
+
+/* Bottom menu
+* --------------------------------------- */
+#splash-overlay #infoMenu li a {
+    color: #fff;
+}
+
+body.splash-page-body #splash-close-btn {
+    font-size: 50px;
+    border-bottom: 0px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+body.splash-page-body #splash-close-btn:hover, 
+body.splash-page-body #splash-close-btn:active, 
+body.splash-page-body #splash-close-btn:focus {
+    text-decoration: underline;
+}
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+body.splash-page-body .section{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Defining each section background and styles
+* --------------------------------------- */
+body.splash-page-body #section0{
+    background-image: url(/splash-page/imgs/img3.jpg);
+}
+
+body.splash-page-body #section1{
+    background-image: url(/splash-page/imgs/img2.jpg);
+}
+
+body.splash-page-body #section2{
+    background-image: url(/splash-page/imgs/img1.jpg);
+}
+
+/* Bottom menu
+* --------------------------------------- */
+body.splash-page-body #infoMenu li a {
+    color: #fff;
+}
