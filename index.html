@@ -3,9 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Arnolfini</title>
-    <meta name="description" content="Arnolfini" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/splash-page/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="/splash-page/css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="/splash-page/css/examples.css" />
     <link rel="stylesheet" type="text/css" href="/splash-page/css/custom.css" />
@@ -19,7 +17,10 @@
         jQuery(document).ready(function() {
             jQuery('#splash-content').fullpage({
                 autoScrolling: false,
-                verticalCentered: false
+                verticalCentered: false,
+                resize: false,
+                scrollOverflow: true,
+                fitToSection: false
             });
 
             if (jQuery("body").hasClass("splash-page-body")) {
@@ -30,33 +31,92 @@
 </head>
 <body class="splash-page-body">
     <div id="splash-content">
-        <div class="section" id="section0">
+        <div class="section fp-table" id="section0">
+
             <div class="top-scrolling-text blue">
-                <div class="scrolling-text-wrapper" data-dir="pos" data-count="0.3">
-                    <h2 class="scrolling-text"><span>Arnolfini</span></h2>
+                <div class="scrolling-text-wrapper" data-dir="pos" data-count="0.2" data-ntotal="5">
+                    <h2 class="scrolling-text title"><span>Arnolfini</span></h2>
                 </div>
             </div>
+
+            <div class="main-content-wrapper fp-tableCell">
+                <div class="intro">
+                    <h1 class="main-title"><span class="title">Autumn Season:</span><span class="title">Grayson Perry</span><span class="dates">27 Sept to 24 Dec</span></h1>
+                    <h2 class="main-text">Free Admission</h2>
+                    <div class="splash-btn-wrapper">
+                        <a href="/visit" class="btn splash-btn">Plan your visit</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="bottom-scrolling-text blue">
-                <div class="scrolling-text-wrapper" data-dir="pos" data-count="0.8">
+                <div class="scrolling-text-wrapper" data-dir="pos" data-count="0.6" data-ntotal="4.5">
                     <h2 class="scrolling-text"><span>Grayson Perry</span></h2>
                 </div>
             </div>
         </div>
-        <div class="section" id="section1">
+        <div class="section fp-table" id="section1">
+            <div class="main-content-wrapper fp-tableCell">
+                <div class="intro secondary">
+                    <div class="secondary-wrapper">
+                        <div class="secondary-wrapper-title">
+                            <h2 class="main-text">Café bar</h2>
+                            <p>Come and enjoy homemade cakes, great coffee, local beers, sandwiches and light bites.</p>
+                        </div>
+                        <div class="splash-btn-wrapper">
+                            <a href="/visit/cafe-bar" class="btn splash-btn">View the menu</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
             <div class="bottom-scrolling-text orange">
-                <div class="scrolling-text-wrapper" data-dir="neg" data-count="0.9">
+                <div class="scrolling-text-wrapper" data-dir="neg" data-count="0.4" data-ntotal="5.5">
                     <h2 class="scrolling-text"><span>Café Bar</span></h2>
                 </div>
             </div>
         </div>
-        <div class="section" id="section2">
+        <div class="section fp-table" id="section2">
+            <div class="main-content-wrapper fp-tableCell">
+                <div class="intro secondary">
+                    <div class="secondary-wrapper">
+                        <div class="secondary-wrapper-title">
+                            <h2 class="main-text">Bookshop</h2>
+                            <p>We stock gifs, archive posters and an exceptional range of books, magazines and periodicals.</p>
+                        </div>
+                        <div class="splash-btn-wrapper">
+                            <a href="/visit/bookshop/" class="btn splash-btn">Find out more</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
             <div class="bottom-scrolling-text orange-text">
-                <div class="scrolling-text-wrapper" data-dir="pos" data-count="1.5">
+                <div class="scrolling-text-wrapper" data-dir="pos" data-count="1.2" data-ntotal="4.5">
                     <h2 class="scrolling-text"><span>Bookshop</span></h2>
                 </div>
             </div>
         </div>
+        <div class="section fp-table" id="section-footer">
+            <div class="main-content-wrapper fp-tableCell">
+                <div class="footer-wrapper">
+                    <h2><span class="title">Autumn Season:<span><span class="title">Grayson Perry</span></h2>
+                    <h2><span class="dates">27 Sept to 24 Dec</span></h2>
+                </div>
+                <div class="logos-wrapper">
+                    <ul>
+                        <li><img src="/splash-page/imgs/council.svg"/></li>
+                        <li><img class="small-logo" src="/splash-page/imgs/bristolcity.svg"/></li>
+                        <li><img src="/splash-page/imgs/craftsmen.svg"/></li>
+                        <li><img class="small-logo" src="/splash-page/imgs/bristol-24.png"/></li>
+                    </ul>
+                </div>
+                <div class="footer-text-wrapper">
+                    <p>Grayson Perry: The most popular art exhibition ever! Is initiated and organised by the serpentine galleries, London.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <a href="#" id="splash-close-btn">x</a>
 </body>
 </html>

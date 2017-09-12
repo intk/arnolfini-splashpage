@@ -1,33 +1,32 @@
 jQuery(document).ready(function() {
-	if (jQuery("body.section-front-page.template-front_page_view").length) {
-		jQuery("body").append('<div id="splash-overlay"></div>');
-		jQuery("#splash-overlay").load('/splash-page/', function() {
-			populateExTicker();
-		});
+    if (jQuery("body.section-front-page.template-front_page_view").length) {
+        jQuery("body").append('<div id="splash-overlay" aria-hidden="false"></div><div id="splash-close-btn" class="close-overlay" aria-hidden="false"><img src="/splash-page/imgs/close-icon.svg"/></div>');
+        jQuery("#splash-overlay").load('/splash-page/', function() {
+            var body = document.body,
+                overlay = document.querySelector('#splash-overlay'),
+                overlayBtts = document.querySelectorAll('div[class$="close-overlay"]');
 
-		var scrollTimer;
-
-		var refreshScroll = function() {
-			exTickerLoop();
-		}
-
-		jQuery("#splash-overlay").on('scroll', function () {
-			clearTimeout(scrollTimer);
-			for (var i = 0; i < window.scrollingTimers.length; i++) {
-				clearTimeout(window.scrollingTimers[i]);
-			}
-			scrollTimer = setTimeout(refreshScroll, 250);
-		});
-
-		jQuery("body").on('click touchend', '#splash-close-btn', function(e) { 
-			e.preventDefault(); 
-			jQuery("#splash-overlay").css("overflow", "hidden");
-			jQuery("#splash-overlay").fadeOut();
-			jQuery("body").addClass("splash-off");
-			for (var i = 0; i < window.scrollingTimers.length; i++) {
-				clearTimeout(window.scrollingTimers[i]);
-			}
-		});
-	}
+            function overlayToggle(overlayObj) {
+                var overlayOpen = overlayObj.className === 'open-overlay';
+                overlay.setAttribute('aria-hidden', !overlayOpen);
+                overlayObj.setAttribute('aria-hidden', !overlayOpen);
+                body.classList.toggle('splash-off', !overlayOpen);
+                $.fn.fullpage.destroy('all');
+                for (var i = 0; i < window.scrollingTimers.length; i++) {
+                    clearTimeout(window.scrollingTimers[i]);
+                }
+                overlay.scrollTop = 0;
+            };
+            
+            [].forEach.call(overlayBtts, function(btt) {
+                btt.addEventListener('click', function() { 
+                    overlayToggle(this);
+                }, false);
+                btt.addEventListener('touchend', function() { 
+                    overlayToggle(this);
+                }, false);
+            });
+            populateExTicker();
+        });
+    }
 });
-

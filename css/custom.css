@@ -1,18 +1,14 @@
 body.splash-page-body {
     margin: 0;
-}
-
-
-body.section-front-page.template-front_page_view #visual-portal-wrapper {
-    pointer-events: none !important;
-}
-
-body.section-front-page.template-front_page_view #visual-portal-wrapper * {
-    pointer-events: none !important;
+    font-family: "Helvetica", sans-serif;
 }
 
 body.section-front-page.template-front_page_view.splash-off #visual-portal-wrapper { 
     visibility: visible;
+}
+
+body.section-front-page.template-front_page_view.splash-off #visual-portal-wrapper div.carousel { 
+    visibility: visible !important;
 }
 
 body.section-front-page.template-front_page_view.splash-off {
@@ -24,36 +20,186 @@ body.section-front-page.template-front_page_view.splash-off {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 2147483647;
-    overflow: auto;
+    overflow-y: scroll;
     touch-action: none;
     -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    box-shadow: none;
+    transform: translateZ(0); 
+    -webkit-font-smoothing: antialiased;
 }
 
-#splash-overlay #splash-close-btn {
-    font-size: 50px;
-    border-bottom: 0px;
-    position: absolute;
-    top: 17px;
-    right: 10px;
-    text-decoration: none;
-    z-index: 10000;
+#splash-overlay[aria-hidden="true"] { display: none; }
+#splash-overlay[aria-hidden="false"] { display: block; }
+body.splash-page-body[aria-hidden="true"] { display: none; }
+body.splash-page-body[aria-hidden="false"] { display: block; }
+#splash-close-btn[aria-hidden="true"] { display:none; }
+
+#splash-overlay #splash-close-btn,
+body.splash-page-body #splash-close-btn,
+#splash-close-btn {
+    position: fixed;
+    top: 0;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    box-shadow: none;
+    transform: translateZ(0); 
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    z-index: 9999999999;
 }
 
-@media(max-width: 991px) {
-    #splash-overlay #splash-close-btn {
-        left: 10px;
-    }
+#splash-overlay #splash-close-btn img,
+body.splash-page-body #splash-close-btn img,
+#splash-close-btn img {
+    width: 100%;
+    height: 100%;
 }
+
 
 #splash-overlay #splash-close-btn:hover, 
 #splash-overlay #splash-close-btn:active, 
-#splash-overlay #splash-close-btn:focus {
-    text-decoration: underline;
+#splash-overlay #splash-close-btn:focus, 
+body.splash-page-body #splash-close-btn:hover, 
+body.splash-page-body #splash-close-btn:active, 
+body.splash-page-body #splash-close-btn:focus {
+    
 }
 
+.main-content-wrapper h2.main-text {
+    font-size: 3.000em;
+}
+
+.main-content-wrapper {
+    width: 100%;
+}
+
+.main-content-wrapper .intro {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-content-wrapper .intro.secondary {
+    padding-top: 23%;
+}
+
+.main-title {
+    font-size: 80px;
+    line-height: 84px;
+}
+
+.main-title span.dates {
+    display: block;
+    text-transform: uppercase;
+    color: #fb6f48;
+}
+
+.main-title span.title {
+    display: block;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #fb6f48;
+}
+
+.main-content-wrapper .intro.secondary .secondary-wrapper {
+    background-color: #ffffff;
+    max-width: 480px;
+}
+
+.main-content-wrapper .intro.secondary .secondary-wrapper .secondary-wrapper-title { 
+    padding: 30px;
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+.main-content-wrapper .intro.secondary .secondary-wrapper h2.main-text {
+    margin-bottom: 10px;
+}
+
+
+.main-content-wrapper .intro.secondary .secondary-wrapper .secondary-wrapper-title p {
+    font-family: "AtlasGrotesk-Regular", sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.main-content-wrapper .intro.secondary .secondary-wrapper .splash-btn-wrapper {
+    margin-top: 0px;
+}
+
+@media(max-width: 991px) {
+    .main-title {
+        font-size: 45px;
+        line-height: 50px;
+    }
+}
+
+a.splash-btn {
+    border-bottom: 0px !important;
+    height: 49px;
+    line-height: 51px;
+    background-color: #5fa0bd;
+    vertical-align: bottom;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'AtlasGrotesk-Medium', sans-serif;
+    text-rendering: optimizeLegibility;
+    padding-left: 25px;
+    padding-right: 0px;
+    font-size: 13px;
+    width: 180px;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+}   
+
+a.splash-btn:after {
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: "FontAwesome";
+    content: "\f04b";
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: bottom;
+    font-size: 14px;
+    margin-left: 25px;
+    margin-right: 20px;
+    position: relative;
+}
+
+a.splash-btn:hover,
+a.splash-btn:focus,
+a.splash-btn:active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.splash-btn-wrapper {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
 
 /* Scrolling div */
 #splash-overlay .top-scrolling-text,
@@ -62,8 +208,14 @@ body.splash-page-body .top-scrolling-text {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 66px;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    box-shadow: none;
+    transform: translateZ(0);
 }
 
 #splash-overlay .bottom-scrolling-text,
@@ -72,8 +224,14 @@ body.splash-page-body .bottom-scrolling-text {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 66px;
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    box-shadow: none;
+    transform: translateZ(0);
 }
 
 .top-scrolling-text.blue,
@@ -107,17 +265,23 @@ body.splash-page-body .bottom-scrolling-text {
     height: 100%;
     width: 1000%;
     white-space: nowrap;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    box-shadow: none;
+    transform: translateZ(0); 
 }
 
 .scrolling-text-wrapper .scrolling-text {
-    font-size: 28px;
+    font-size: 29px;
     color: #000000;
     display: inline-block;
     position: relative;
     width: auto;
     height: 100%;
     margin: 0;
-    line-height: 63px;
+    line-height: 71px;
     text-align: left;
     text-transform: uppercase;
     white-space: nowrap;
@@ -125,13 +289,19 @@ body.splash-page-body .bottom-scrolling-text {
 
 /* Move it (define the animation) */
 
+.scrolling-text.title {
+    font-family: 'arnolfinibold', sans-serif;
+}
+
 .scrolling-text span {
-    margin-right: 80px;
+    padding-left: 48px;
+    padding-right: 48px;
 }
 
 /* Backgrounds will cover all the section
 * --------------------------------------- */
-#splash-overlay .section{
+#splash-overlay .section,
+body.splash-page-body .section {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -139,64 +309,156 @@ body.splash-page-body .bottom-scrolling-text {
 
 /* Defining each section background and styles
 * --------------------------------------- */
-#splash-overlay #section0{
-    background-image: url(/splash-page/imgs/img3.jpg);
+#splash-overlay #section0,
+body.splash-page-body #section0 {
+    background-image: url(/splash-page/imgs/img3.jpg);   
 }
 
-#splash-overlay #section1{
+ @media(min-width: 991px) {
+    #splash-overlay #section0,
+    body.splash-page-body #section0 {
+        background-image: url(/splash-page/imgs/img3.jpg);
+        background-position-y: -100px;
+   
+    }        
+}
+
+#splash-overlay #section1,
+body.splash-page-body #section1 {
     background-image: url(/splash-page/imgs/img2.jpg);
 }
 
-#splash-overlay #section2{
+#splash-overlay #section2,
+body.splash-page-body #section2 {
     background-image: url(/splash-page/imgs/img1.jpg);
 }
 
-/* Bottom menu
-* --------------------------------------- */
-#splash-overlay #infoMenu li a {
-    color: #fff;
+#section-footer {
+    height: 470px !important;
+    background-color: #5fa0bd;
 }
 
-body.splash-page-body #splash-close-btn {
-    font-size: 50px;
-    border-bottom: 0px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    text-decoration: none;
-    z-index: 1000;
+#section-footer .footer-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    color: #ffffff;
 }
 
-body.splash-page-body #splash-close-btn:hover, 
-body.splash-page-body #splash-close-btn:active, 
-body.splash-page-body #splash-close-btn:focus {
+#section-footer .footer-wrapper h2 {
+    font-size: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+@media(max-width: 991px) {
+    #section-footer .footer-wrapper h2 {
+        font-size: 30px;
+    }
+}
+
+@media(min-width: 992px) {
+    #section-footer .footer-wrapper h2 {
+        width: 50%;
+        float: left;
+        line-height: 43px;
+    }
+}
+
+#section-footer .footer-wrapper h2 span.title {
+    display: block;
     text-decoration: underline;
 }
 
-/* Backgrounds will cover all the section
-* --------------------------------------- */
-body.splash-page-body .section{
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+#section-footer .footer-wrapper h2 span.dates {
+    display: block;
 }
 
-/* Defining each section background and styles
-* --------------------------------------- */
-body.splash-page-body #section0{
-    background-image: url(/splash-page/imgs/img3.jpg);
+#section-footer .logos-wrapper {
+    clear:both;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 100%;
+    overflow: hidden;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0px;
+    padding-top: 6%;
+
 }
 
-body.splash-page-body #section1{
-    background-image: url(/splash-page/imgs/img2.jpg);
+#section-footer .logos-wrapper ul {
+    padding-left: 0;
+    padding-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-body.splash-page-body #section2{
-    background-image: url(/splash-page/imgs/img1.jpg);
+#section-footer .logos-wrapper li {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 16%;
+    flex-basis: 20%;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 16px;
 }
 
-/* Bottom menu
-* --------------------------------------- */
-body.splash-page-body #infoMenu li a {
-    color: #fff;
+#section-footer .logos-wrapper img {
+    display: block;
+    max-width: 80%;
+    width: 100%;
+    margin: 0 20px;
+    margin-left: 0px;
 }
+
+#section-footer .logos-wrapper img.small-logo {
+    max-width: 80px;
+}
+
+#section-footer .footer-text-wrapper {
+    clear:both;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#section-footer .footer-text-wrapper p {
+    font-family: 'AtlasGrotesk-Medium', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+#section-footer .fp-tableCell {
+    vertical-align: top !important;
+    padding-top: 7% !important;
+}
+
+@media(max-width: 991px) {
+    #section-footer .fp-tableCell {
+        vertical-align: top !important;
+        padding-top: 50px !important;
+    }
+}
+
+
+
