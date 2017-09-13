@@ -3,36 +3,39 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="At the heart of Bristol&apos;s harbourside, Arnolfini is one of Europe&apos;s leading centres for the contemporary arts. Entry to the galleries is free."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arnolfini — Centre for Contemporary Arts in Bristol</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/portal_css/Arnolfini%20Theme/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/portal_css/Arnolfini%20Theme/base.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/portal_css/Arnolfini%20Theme/public.css" />
+    <link rel="stylesheet" type="text/css" href="/portal_css/Arnolfini%20Theme/++resource++plonetheme.arnolfini.stylesheets/main.css" />
     <link rel="stylesheet" type="text/css" href="/splash-page/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="/splash-page/css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="/splash-page/css/examples.css" />
     <link rel="stylesheet" type="text/css" href="/splash-page/css/custom.css" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WJPR4F2');</script>
+    <!-- End Google Tag Manager -->
     
     <script>window.jQuery || document.write('<script src="/splash-page/js/jquery.min.js">\x3C/script>')</script>
     <script src="/splash-page/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/splash-page/js/jquery.slimscroll.min.js"></script>
     <script type="text/javascript" src="/splash-page/js/jquery.fullPage.min.js"></script>
-
-    <script>
-        jQuery(document).ready(function() {
-            jQuery('#splash-content').fullpage({
-                autoScrolling: false,
-                verticalCentered: false,
-                resize: false,
-                scrollOverflow: true,
-                fitToSection: false
-            });
-
-            if (jQuery("body").hasClass("splash-page-body")) {
-                populateExTicker();
-            };
-        });
-    </script>
+    <script type="text/javascript" src="/splash-page/js/custom.js"></script>
 </head>
 <body class="splash-page-body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJPR4F2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="splash-content">
         <div class="section fp-table" id="section0">
-
             <div class="top-scrolling-text blue">
                 <div class="scrolling-text-wrapper" data-dir="pos" data-count="0.2" data-ntotal="5">
                     <h2 class="scrolling-text title"><span>Arnolfini</span></h2>
@@ -60,12 +63,13 @@
                 <div class="intro secondary">
                     <div class="secondary-wrapper">
                         <div class="secondary-wrapper-title">
-                            <h2 class="main-text">Café bar</h2>
-                            <p>Come and enjoy homemade cakes, great coffee, local beers, sandwiches and light bites.</p>
+                            <h2 class="main-text">Arnolfini Café bar</h2>
+                            <p>Working in partnership with Bristol Beer Factory.</p>
                         </div>
                         <div class="splash-btn-wrapper">
                             <a href="/visit/cafe-bar" class="btn splash-btn">View the menu</a>
                         </div>
+                        <img class="bottom-right bbf" src="/splash-page/imgs/BBF.svg"/>
                     </div>
                     
                 </div>
@@ -105,10 +109,12 @@
                 </div>
                 <div class="logos-wrapper">
                     <ul>
-                        <li><img src="/splash-page/imgs/council.svg"/></li>
-                        <li><img class="small-logo" src="/splash-page/imgs/bristolcity.svg"/></li>
+                        <li><img class="w100" src="/splash-page/imgs/council.svg"/></li>
+                        <li><img class="small-logo mtop5" src="/splash-page/imgs/bristolcity.svg"/></li>
                         <li><img src="/splash-page/imgs/craftsmen.svg"/></li>
+                        <li><img class="w70 mtop15 mleft25" src="/splash-page/imgs/UWE_Top_transparent.png"/></li>
                         <li><img class="small-logo" src="/splash-page/imgs/bristol-24.png"/></li>
+                        
                     </ul>
                 </div>
                 <div class="footer-text-wrapper">
@@ -118,5 +124,6 @@
 
         </div>
     </div>
+    <a href="/front-page"><div id="splash-close-btn" class="close-overlay" aria-hidden="false"><img src="/splash-page/imgs/close-icon.svg"/></div></a>
 </body>
 </html>

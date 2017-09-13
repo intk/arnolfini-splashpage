@@ -1,55 +1,14 @@
 body.splash-page-body {
     margin: 0;
-    font-family: "Helvetica", sans-serif;
-}
-
-body.section-front-page.template-front_page_view.splash-off #visual-portal-wrapper { 
-    visibility: visible;
-}
-
-body.section-front-page.template-front_page_view.splash-off #visual-portal-wrapper div.carousel { 
-    visibility: visible !important;
-}
-
-body.section-front-page.template-front_page_view.splash-off {
-    margin-top: 20px !important;
-    overflow: auto !important;
-}
-
-#splash-overlay {
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2147483647;
-    overflow-y: scroll;
-    touch-action: none;
-    -webkit-overflow-scrolling: touch;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform;
-    box-shadow: none;
-    transform: translateZ(0); 
     -webkit-font-smoothing: antialiased;
 }
 
-#splash-overlay[aria-hidden="true"] { display: none; }
-#splash-overlay[aria-hidden="false"] { display: block; }
-body.splash-page-body[aria-hidden="true"] { display: none; }
-body.splash-page-body[aria-hidden="false"] { display: block; }
 #splash-close-btn[aria-hidden="true"] { display:none; }
 
-#splash-overlay #splash-close-btn,
-body.splash-page-body #splash-close-btn,
 #splash-close-btn {
     position: fixed;
     top: 0;
-    right: 15px;
+    right: 0px;
     width: 50px;
     height: 50px;
     background: #ffffff;
@@ -66,25 +25,26 @@ body.splash-page-body #splash-close-btn,
     z-index: 9999999999;
 }
 
-#splash-overlay #splash-close-btn img,
-body.splash-page-body #splash-close-btn img,
+@media(min-width: 992px) {
+    #splash-close-btn {
+        right: 0px;
+        margin-top: 76px;
+    }
+}
+
 #splash-close-btn img {
     width: 100%;
     height: 100%;
 }
 
-
-#splash-overlay #splash-close-btn:hover, 
-#splash-overlay #splash-close-btn:active, 
-#splash-overlay #splash-close-btn:focus, 
-body.splash-page-body #splash-close-btn:hover, 
-body.splash-page-body #splash-close-btn:active, 
-body.splash-page-body #splash-close-btn:focus {
-    
-}
-
 .main-content-wrapper h2.main-text {
     font-size: 3.000em;
+}
+
+@media(max-width: 991px) {
+    .main-content-wrapper h2.main-text {
+        font-size: 2.250em;
+    } 
 }
 
 .main-content-wrapper {
@@ -94,6 +54,13 @@ body.splash-page-body #splash-close-btn:focus {
 .main-content-wrapper .intro {
     width: 80%;
     margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .main-content-wrapper .intro {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .main-content-wrapper .intro.secondary {
@@ -121,6 +88,7 @@ body.splash-page-body #splash-close-btn:focus {
 .main-content-wrapper .intro.secondary .secondary-wrapper {
     background-color: #ffffff;
     max-width: 480px;
+    position: relative;
 }
 
 .main-content-wrapper .intro.secondary .secondary-wrapper .secondary-wrapper-title { 
@@ -146,8 +114,8 @@ body.splash-page-body #splash-close-btn:focus {
 
 @media(max-width: 991px) {
     .main-title {
-        font-size: 45px;
-        line-height: 50px;
+        font-size: 30px;
+        line-height: 35px;
     }
 }
 
@@ -202,7 +170,6 @@ a.splash-btn:active {
 }
 
 /* Scrolling div */
-#splash-overlay .top-scrolling-text,
 body.splash-page-body .top-scrolling-text {
     position: absolute;
     top: 0;
@@ -218,7 +185,6 @@ body.splash-page-body .top-scrolling-text {
     transform: translateZ(0);
 }
 
-#splash-overlay .bottom-scrolling-text,
 body.splash-page-body .bottom-scrolling-text {
     position: absolute;
     bottom: 0;
@@ -300,7 +266,6 @@ body.splash-page-body .bottom-scrolling-text {
 
 /* Backgrounds will cover all the section
 * --------------------------------------- */
-#splash-overlay .section,
 body.splash-page-body .section {
     background-size: cover;
     background-position: center center;
@@ -309,13 +274,11 @@ body.splash-page-body .section {
 
 /* Defining each section background and styles
 * --------------------------------------- */
-#splash-overlay #section0,
 body.splash-page-body #section0 {
     background-image: url(/splash-page/imgs/img3.jpg);   
 }
 
  @media(min-width: 991px) {
-    #splash-overlay #section0,
     body.splash-page-body #section0 {
         background-image: url(/splash-page/imgs/img3.jpg);
         background-position-y: -100px;
@@ -323,19 +286,22 @@ body.splash-page-body #section0 {
     }        
 }
 
-#splash-overlay #section1,
 body.splash-page-body #section1 {
     background-image: url(/splash-page/imgs/img2.jpg);
 }
 
-#splash-overlay #section2,
 body.splash-page-body #section2 {
     background-image: url(/splash-page/imgs/img1.jpg);
 }
 
 #section-footer {
-    height: 470px !important;
     background-color: #5fa0bd;
+}
+
+@media(min-width: 991px) {
+    #section-footer {
+        height: 470px !important;
+    }
 }
 
 #section-footer .footer-wrapper {
@@ -344,15 +310,21 @@ body.splash-page-body #section2 {
     color: #ffffff;
 }
 
+@media(max-width: 991px) {
+    #section-footer .footer-wrapper {
+        width: 90%;
+    }
+}
+
 #section-footer .footer-wrapper h2 {
-    font-size: 40px;
+    font-size: 43px;
     color: #ffffff;
     text-transform: uppercase;
 }
 
 @media(max-width: 991px) {
     #section-footer .footer-wrapper h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
@@ -360,7 +332,7 @@ body.splash-page-body #section2 {
     #section-footer .footer-wrapper h2 {
         width: 50%;
         float: left;
-        line-height: 43px;
+        line-height: 46px;
     }
 }
 
@@ -385,6 +357,13 @@ body.splash-page-body #section2 {
     padding: 0px;
     padding-top: 6%;
 
+}
+
+@media(max-width: 991px) {
+    #section-footer .logos-wrapper {
+        width: 90%;
+        padding-top: 0px;
+    }
 }
 
 #section-footer .logos-wrapper ul {
@@ -424,6 +403,22 @@ body.splash-page-body #section2 {
     font-size: 16px;
 }
 
+@media screen and (max-width: 800px) {
+    #section-footer .logos-wrapper li {
+        -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #section-footer .logos-wrapper li {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    }
+}
+
+
+
 #section-footer .logos-wrapper img {
     display: block;
     max-width: 80%;
@@ -436,16 +431,62 @@ body.splash-page-body #section2 {
     max-width: 80px;
 }
 
+@media (max-width: 991px) {
+    #section-footer .logos-wrapper img.small-logo {
+        max-width: 60px;
+    }
+
+    #section-footer .logos-wrapper li {
+        padding-bottom: 0px;
+    }
+}
+
+#section-footer .logos-wrapper img.w100 {
+    max-width: 100%;
+}
+
+#section-footer .logos-wrapper img.w70 {
+    max-width: 70%;
+}
+
+#section-footer .logos-wrapper img.mtop5 {
+    margin-top: 6px;
+}
+
+#section-footer .logos-wrapper img.mtop15 {
+    margin-top: 15px;
+}
+
+#section-footer .logos-wrapper img.mleft25 {
+    margin-left: 25px;
+}
+
 #section-footer .footer-text-wrapper {
     clear:both;
     width: 80%;
     margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+    #section-footer .footer-text-wrapper {
+        padding-top: 40px;
+        width: 90%;
+    }
+
+
 }
 
 #section-footer .footer-text-wrapper p {
     font-family: 'AtlasGrotesk-Medium', sans-serif;
     text-transform: uppercase;
     color: #ffffff;
+}
+
+@media(max-width: 370px) {
+    #section-footer .footer-text-wrapper p {
+        font-size: 9px;
+    }
 }
 
 #section-footer .fp-tableCell {
@@ -457,6 +498,32 @@ body.splash-page-body #section2 {
     #section-footer .fp-tableCell {
         vertical-align: top !important;
         padding-top: 50px !important;
+    }
+}
+
+img.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+img.bbf {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 360px) {
+    img.bbf {
+        width: 70px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    .main-title {
+        font-size: 25px;
+        line-height: 30px;
     }
 }
 
