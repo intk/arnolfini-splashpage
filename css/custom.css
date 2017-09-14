@@ -11,7 +11,7 @@ body.splash-page-body {
     right: 0px;
     width: 50px;
     height: 50px;
-    background: #ffffff;
+    background: #fbfbfb;
     cursor: pointer;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -19,7 +19,7 @@ body.splash-page-body {
     will-change: transform;
     box-shadow: none;
     transform: translateZ(0); 
-    margin-top: 8px;
+    margin-top: 76px;
     margin-right: 8px;
     margin-bottom: 8px;
     z-index: 9999999999;
@@ -282,8 +282,21 @@ body.splash-page-body #section0 {
     body.splash-page-body #section0 {
         background-image: url(/splash-page/imgs/img3.jpg);
         background-position-y: -100px;
-   
     }        
+}
+
+@media(max-width: 991px) and (orientation: portrait) {
+    body.splash-page-body #section0 {
+        background-size: 250%;
+        background-position: top center;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    body.splash-page-body #section0 {
+        background-size: 200%;
+        background-position: top center;
+    }
 }
 
 body.splash-page-body #section1 {
@@ -500,7 +513,6 @@ body.splash-page-body #section2 {
         padding-top: 50px !important;
     }
 }
-
 img.bottom-right {
     position: absolute;
     bottom: 0;
@@ -526,6 +538,44 @@ img.bbf {
         line-height: 30px;
     }
 }
+
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;   
+}
+
+a.close {
+    border-bottom: 0px;
+}
+
+.close:hover,
+.close:focus,
+.close:active {
+    opacity: 1;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 23px;
+    content: ' ';
+    height: 57px;
+    margin-top: -3px;
+    width: 4px;
+    background-color: #fb6f48;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
 
 
 
