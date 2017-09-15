@@ -32,6 +32,7 @@ body.splash-page-body {
     }
 }
 
+
 #splash-close-btn img {
     width: 100%;
     height: 100%;
@@ -200,6 +201,8 @@ body.splash-page-body .bottom-scrolling-text {
     transform: translateZ(0);
 }
 
+
+
 .top-scrolling-text.blue,
 .bottom-scrolling-text.blue {
     background-color: #5fa0bd;
@@ -251,6 +254,22 @@ body.splash-page-body .bottom-scrolling-text {
     text-align: left;
     text-transform: uppercase;
     white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+    body.splash-page-body .bottom-scrolling-text,
+    body.splash-page-body .top-scrolling-text {
+        height: 50px;
+    }
+
+    .scrolling-text-wrapper .scrolling-text {
+        font-size: 25px;
+        line-height: 52px;
+    }
+
+    .bottom-scrolling-text .scrolling-text-wrapper .scrolling-text {
+        line-height: 55px;
+    }
 }
 
 /* Move it (define the animation) */
@@ -343,9 +362,7 @@ body.splash-page-body #section2 {
 
 @media(min-width: 992px) {
     #section-footer .footer-wrapper h2 {
-        width: 50%;
-        float: left;
-        line-height: 46px;
+        line-height: 56px;
     }
 }
 
@@ -574,6 +591,57 @@ a.close {
 
 .close:after {
     transform: rotate(-45deg);
+}
+
+
+@media(max-width: 991px) {
+    #splash-close-btn {
+        margin-top: 58px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .close {
+        width: 40px;
+        height: 40px;
+    }
+
+    .close:before, .close:after {
+        margin-top: 0px;
+        left: 18px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 991px) and (orientation: landscape) {
+    .main-content-wrapper h2.main-text {
+        font-size: 1.500em;
+    }
+
+    .splash-btn-wrapper {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .main-content-wrapper .intro.secondary {
+        padding-top: 5%;
+    }
+
+    .main-title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    body.splash-page-body #section0 {
+        background-position: top center;
+        background-position-y: -50px;
+    }
+}
+
+@media(max-width: 480px) and (orientation: landscape) {
+    .main-content-wrapper .intro.secondary {
+        padding-top: 0;
+    }
 }
 
 

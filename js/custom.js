@@ -3,9 +3,8 @@ jQuery(document).ready(function() {
         autoScrolling: false,
         verticalCentered: false,
         resize: false,
-        scrollOverflow: true,
-        fitToSection: false
+        scrollOverflow: false,
+        fitToSection: false,
     });
-
     populateExTicker();
 });
