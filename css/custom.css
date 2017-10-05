@@ -283,6 +283,12 @@ body.splash-page-body .bottom-scrolling-text {
     padding-right: 48px;
 }
 
+.scrolling-text span a:hover,
+.scrolling-text span a:focus,
+.scrolling-text span a:active {
+    text-decoration: underline;
+}
+
 /* Backgrounds will cover all the section
 * --------------------------------------- */
 body.splash-page-body .section {
